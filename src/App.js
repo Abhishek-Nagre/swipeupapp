@@ -1,25 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+      import React, { useState } from 'react';
+      import Popup from './Popup';
+      import "./popupstyle.css";
+      
+      function App() {
+        const [isOpen, setIsOpen] = useState(false);
+       
+        const togglePopup = () => {
+          setIsOpen(!isOpen);
+        }
+       
+        return (
+        <div className="collapsible">
+          
+       
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+
+        <input
+            className="button"
+            type="button"
+            value="Calls"
+            onClick={togglePopup}
+          />   
+          {isOpen && <Popup
+            content={<>
+            <div className="pop-up">
+            <div className="popupContainer">
+              <b className="popupBoard">Board</b>
+              <p>saurabh : 500</p>
+              <p>tanish : joined</p>
+              <p>bablu : called 200</p>
+              </div>
+              </div>
+            </>}
+            handleClose={togglePopup}
+          />}
+        </div> 
   );
-}
+      }
+      
+      export default App;
+ 
 
-export default App;
+

@@ -8,8 +8,13 @@
     "@testing-library/user-event": "^12.1.10",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-id-swiper": "^4.0.0",
     "react-scripts": "4.0.3",
-    "web-vitals": "^1.0.1"
+    "react-spring": "^9.2.4",
+    "react-swiper": "^0.1.5",
+    "swiper": "^6.8.1",
+    "web-vitals": "^1.0.1",
+    "xwiper": "^2.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
